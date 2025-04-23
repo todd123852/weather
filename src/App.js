@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Select from "./components/Select";
+import Weather from "./components/Weather";
+import { useState } from "react";
+export default function App() {
+  const [city, setCity] = useState('')
+  function handleCitySelected(newCity) {
+    setCity(newCity)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Select onCityChange={handleCitySelected}></Select>
+      <Weather cityTittle={city}></Weather>
     </div>
   );
 }
 
-export default App;
