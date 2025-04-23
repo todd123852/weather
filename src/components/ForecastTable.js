@@ -1,6 +1,4 @@
-export default function ForecastTable({dataList}) {
-    // const [thisDayData, setThisDayData] = useImmer(timeData)
-    
+export default function ForecastTable({dataList}) {    
     return(
         <table className="table forecast-table">
             <thead>

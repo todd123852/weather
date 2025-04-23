@@ -19,7 +19,7 @@ export default function Weather({cityTittle}) {
   const [today, setToday] = useState(null)
   const [todayData, setTodayData] = useImmer(timeData)
   const [img, setImg] = useState(null)
-  const baseUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${cityTittle.en}&lang=zh_cn&appid=402eb0c592fce39c64e117445a9737c7&units=metric`
+  const baseUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityTittle.en}&lang=zh_cn&appid=402eb0c592fce39c64e117445a9737c7&units=metric`
   useEffect(() => {
     async function fetchWeather() {
       try {
